@@ -32,7 +32,7 @@ function fatorial(num){
 
 // 3 - Converte valor em dolar para um valor em real
 function cambioDolarReal(dolar){
-    return dolar*4.80;
+    return parseFloat((dolar*4.80).toFixed(2));
 }
 
 // 4 - Calcula area e perimetro
