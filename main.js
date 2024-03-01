@@ -2,19 +2,17 @@
 // 1  imc = peso/ altura^2
 function calculaImc(peso, altura){
     if (altura > 3){
-        return peso/(altura*altura)*10**4;
+        return (peso/(altura*altura)*10**4).toFixed(1);
 
     }else{
-        return peso/(altura*altura); 
+        return (peso/(altura*altura)).toFixed(1); 
     }
 }
 // 2 - Fatorial de um numero dado
 function fatorial(num){
     let resultado= 1;
-    let contador= 1;
-    while(contador<=num){
-        resultado=resultado*contador;
-        contador++
+    for (i=1 ; i<=num ; i++){
+        resultado=resultado*i;
     }
     return resultado;
 }
@@ -39,20 +37,18 @@ function cambioDolarReal(dolar){
 function areaPerimetro(altura, largura){
     let area = altura*largura;
     let perimetro = (altura+largura)*2;
-    alert('Area = '+ area +"  Perimetro = " + perimetro);
+    console.log(`Area = ${area}; Perimetro = ${perimetro};`);
 }
 
 // 5 - Calcula Area circulo
 function areaCirculo(raio){
-    let area = 3.14*raio**2;
+    let area = Math.PI*raio**2;
     console.log(area);
 }
 
 // 6 - Imprime no console a tabuada de um numero dado
 function tabuada(valor){
-    let cont=1;
-    while(cont<=10){
-        console.log(cont +" x " + valor + " = "+cont*valor);
-        cont++;
+    for(i=1; cont<=10; i++){
+        console.log(`${cont} x ${valor} = ${cont*valor}`);
     }
 }
